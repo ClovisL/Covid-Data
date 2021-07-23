@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Covid Data By Country</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+    <script src="../static/js/map.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="../static/js/app.js"></script>
+</head>
+
+<body>
+
+<!-- This section separates the webpage into different blocks to place graphs and tables on -->
+<div class="container">
+    <!-- Title jumbotron on top of page -->
+    <div class="row">
+        <div class="col-md-12 jumbotron text-center">
+            <h1>Covid-19 Infections, Deaths, and Vaccination Percentage By Country</h1>
+            <p>Select a country from the dropdown list to see each one's data</p>
+            <p>Data taken from <a href="https://github.com/owid/covid-19-data/tree/master/public/data" target="_blank">Our
+                World In Data's GitHub page for Covid data.</a></p>
+        </div>
+    </div>
+    <div class="container" id="map-container"></div>
+    <!-- Row containing dropdown list and info box -->
+    <div class="row">
+        <div class="container col-md-2" id="infoBox">
+            <!-- Country list -->
+            <div class="well">
+                <h5>Country:</h5>
+                <select id="selDataset" onchange="optionChanged(this.value)"></select>
+            </div>
+            <!-- Info box -->
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Latest Data For Country</h3>
+                </div>
+                <div id="sample-metadata" class="panel-body"></div>
+            </div>
+            <div class="col-md-2">
+                <div id="gauge"></div>
+            </div>
+        </div>
+        <!-- Graphs and vaccination gauge -->
+        <div class="container col-md-7">
+            <div id="caseGraph"></div>
+        </div>
+    </div>
+    <div class="row" id="variant">
+        <h2 id="variant-header">Covid Variant Statistics</h2>
+        <h4></h4>
+        <div class="col-md-7" id="variant-table"></div>
+        <div class="col-md-5" id="variant-pie"></div>
+    </div>
+</div>
+</body>
+
+</html>
