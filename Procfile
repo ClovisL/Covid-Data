@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT coivd-data-site.wsgi:application
+web: waitress-serve --port=$PORT covid-data-site.wsgi:app
