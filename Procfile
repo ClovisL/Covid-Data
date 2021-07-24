@@ -1,2 +1,2 @@
-web: waitress-serve --port=$PORT covid-data-site.wsgi:app
+web: waitress-serve --port=$PORT app:app
 heroku ps:scale web=1
