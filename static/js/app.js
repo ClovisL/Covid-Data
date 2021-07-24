@@ -2,7 +2,7 @@
 
 // URL to get dictionary of country codes and country codes
 function init() {
-    var urlCountry = 'http://127.0.0.1:5000/data/countrylist'
+    var urlCountry = 'http://localhost/data/countrylist'
 // JSON fetch. File is each country and their corresponding code
     fetch(urlCountry)
         .then(response => response.json())
@@ -44,7 +44,7 @@ function init() {
 
 function getCovidData(countryId) {
 // URL to get daily covid data for each country
-    var urlData = `http://127.0.0.1:5000/data/coviddata?most_recent=1&id=${countryId}`
+    var urlData = `http://localhost/data/coviddata?most_recent=1&id=${countryId}`
 // JSON fetch. File is of every countries data per day
     fetch(urlData)
         .then(response => response.json())
@@ -83,7 +83,7 @@ function getCovidData(countryId) {
             // COUNTRY POPULATION SECTION
 
             // URL to get current population for each country
-            var urlPopulation = `http://127.0.0.1:5000/data/countrydemo?id=${countryId}`
+            var urlPopulation = `http://localhost/data/countrydemo?id=${countryId}`
             // JSON fetch. File is of every countries data per day
             fetch(urlPopulation)
                 .then(response => response.json())
@@ -119,7 +119,7 @@ function getCovidData(countryId) {
 }
 
 function getCovidTimeGraphs(countryId) {
-    var url = `http://127.0.0.1:5000/data/coviddata?id=${countryId}`
+    var url = `http://localhost/data/coviddata?id=${countryId}`
     console.log(url);
 
     fetch(url)
@@ -190,7 +190,7 @@ function getCovidTimeGraphs(countryId) {
 }
 
 function getVariantData(countryId) {
-    var url = `http://127.0.0.1:5000/data/variantdata?most_recent=1&id=${countryId}`;
+    var url = `http://localhost/data/variantdata?most_recent=1&id=${countryId}`;
 
     fetch(url)
         .then(response => response.json())
