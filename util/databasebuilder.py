@@ -2,8 +2,8 @@ import sys
 
 sys.path.append("..")
 
-from covidvaccinationproject.util import dataprocessor
-from covidvaccinationproject.util.sqlconnector import Table, SqlConnector
+from util import dataprocessor
+from util.sqlconnector import Table, SqlConnector
 
 
 from sqlalchemy import Integer, DateTime, String, Float, Column, PrimaryKeyConstraint, Index

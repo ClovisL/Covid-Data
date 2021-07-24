@@ -2,9 +2,9 @@ import pytest
 import logging
 from sqlalchemy import Column, String, Integer, inspect, select
 
-from covidvaccinationproject.util.sqlconnector import SqlConnector, Table
+from util.sqlconnector import SqlConnector, Table
 
-from covidvaccinationproject.util.logger import logconfig
+from util.logger import logconfig
 
 logconfig.setup_logging()
 logging.getLogger('covidvaccinationproject.util.sqlconnector').setLevel(logging.DEBUG)

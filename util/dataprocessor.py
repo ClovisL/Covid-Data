@@ -1,7 +1,7 @@
 import logging
 import datetime as dt
 
-from covidvaccinationproject.util import dataconnector, webservice
+from util import dataconnector, webservice
 
 URL = 'https://covid.ourworldindata.org/data/owid-covid-data.json'
 JSON_DATA = dataconnector.get_json_from_web(URL)

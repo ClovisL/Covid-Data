@@ -2,9 +2,9 @@ import pytest
 import logging
 import datetime as dt
 
-from covidvaccinationproject.util import dataprocessor as dp
+from util import dataprocessor as dp
 
-from covidvaccinationproject.util.logger import logconfig
+from util.logger import logconfig
 logconfig.setup_logging()
 logging.getLogger('covidvaccinationproject.util.dataprocessor').setLevel(logging.DEBUG)
 

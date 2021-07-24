@@ -2,8 +2,8 @@ import logging
 
 import pytest
 
-from covidvaccinationproject.util import dataconnector as dc
-from covidvaccinationproject.util.logger import logconfig
+from util import dataconnector as dc
+from util.logger import logconfig
 
 logconfig.setup_logging()
 logging.getLogger('covidvacinationproject.util.dataconnector').setLevel(logging.DEBUG)

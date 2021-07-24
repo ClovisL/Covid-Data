@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 import logging
 import datetime as dt
 
-from covidvaccinationproject.util.sqlconnector import Table, SqlConnector
+from util.sqlconnector import Table, SqlConnector
 
 
 def get_country_list():
