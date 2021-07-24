@@ -3,11 +3,11 @@ import sys
 
 sys.path.append("..")
 
-from covidvaccinationproject.util.databasebuilder import build_database
-from covidvaccinationproject.util.webservice import get_country_list, get_country_demographics, get_covid_data, get_variant_data
-from covidvaccinationproject.util.sqlconnector import SqlConnector
+from util.databasebuilder import build_database
+from util.webservice import get_country_list, get_country_demographics, get_covid_data, get_variant_data
+from util.sqlconnector import SqlConnector
 
-from covidvaccinationproject.util.logger import logconfig
+from util.logger import logconfig
 
 app = Flask(__name__)
 
