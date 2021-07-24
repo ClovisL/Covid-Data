@@ -2,7 +2,7 @@
 
 // URL to get dictionary of country codes and country codes
 function init() {
-    var urlCountry = '/data/countrylist'
+    var urlCountry = '/data/countrylist';
 // JSON fetch. File is each country and their corresponding code
     fetch(urlCountry)
         .then(response => response.json())
