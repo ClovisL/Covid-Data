@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT covid-data-site:app
+web: waitress-serve --port=$PORT Covid-Data:app
