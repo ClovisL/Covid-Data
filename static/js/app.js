@@ -2,7 +2,7 @@
 
 // URL to get dictionary of country codes and country codes
 function init() {
-    var urlCountry = 'http://localhost/data/countrylist'
+    var urlCountry = '/data/countrylist'
 // JSON fetch. File is each country and their corresponding code
     fetch(urlCountry)
         .then(response => response.json())
@@ -44,7 +44,7 @@ function init() {
 
 function getCovidData(countryId) {
 // URL to get daily covid data for each country
-    var urlData = `http://localhost/data/coviddata?most_recent=1&id=${countryId}`
+    var urlData = `/data/coviddata?most_recent=1&id=${countryId}`
 // JSON fetch. File is of every countries data per day
     fetch(urlData)
         .then(response => response.json())
