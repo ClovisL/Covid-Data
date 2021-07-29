@@ -7,7 +7,7 @@ function formatDate(date) {
 }
 
 function loadPopulationChart() {
-    Highcharts.getJSON('http://127.0.0.1:5000/data/countrydemo', function (data) {
+    Highcharts.getJSON('http://localhost:5000/data/countrydemo', function (data) {
         console.log('import map')
         console.log(data);
 
@@ -69,7 +69,7 @@ function loadPopulationChart() {
 }
 
 function loadDailyCaseChart() {
-    Highcharts.getJSON('http://127.0.0.1:5000/data/coviddata?most_recent=1', function (data) {
+    Highcharts.getJSON('http://localhost:5000/data/coviddata?most_recent=1', function (data) {
         console.log('import map')
         console.log(data);
 
@@ -93,10 +93,6 @@ function loadDailyCaseChart() {
         bubbleData = bubbleData.filter(point => point.z > 0)
 
         console.log(mapData)
-
-        // var popData = data.filter(point => point.total_cases_per_million > 0).map(point => point.total_cases_per_million);
-        // var maxPop = Math.max.apply(null, popData);
-        // console.log(popData);
 
 
         console.log()
