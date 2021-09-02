@@ -7,7 +7,7 @@ function formatDate(date) {
 }
 
 function loadPopulationChart() {
-    Highcharts.getJSON('http://localhost:5000/data/countrydemo', function (data) {
+    Highcharts.getJSON('https://covid-data-site.herokuapp.com/data/countrydemo', function (data) {
         console.log('import map')
         console.log(data);
 
@@ -69,7 +69,7 @@ function loadPopulationChart() {
 }
 
 function loadDailyCaseChart() {
-    Highcharts.getJSON('http://localhost:5000/data/coviddata?most_recent=1', function (data) {
+    Highcharts.getJSON('https://covid-data-site.herokuapp.com/data/coviddata?most_recent=1', function (data) {
         console.log('import map')
         console.log(data);
 
