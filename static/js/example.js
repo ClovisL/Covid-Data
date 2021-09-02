@@ -1,4 +1,5 @@
-var url = '././data/countrylist'
+// var url = '././data/countrylist'
+var url = 'https://covid-data-site.herokuapp.com/data/countrylist'
 fetch(url)
     .then(response => response.json())
     .then(data => console.log(data))
