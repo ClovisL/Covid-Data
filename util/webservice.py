@@ -17,7 +17,7 @@ def get_country_list():
     Session = sessionmaker(bind=conn.engine)
     session = Session()
 
-    query = session.query(country_table.table.c.country_id, country_table.table.c.location)
+    query = session.query(country_table.table.country_id, country_table.table.location)
 
     for country in query:
         country_list.append({
