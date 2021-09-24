@@ -10,7 +10,7 @@ from sqlalchemy import Integer, DateTime, String, Float, Column, PrimaryKeyConst
 
 
 def _create_database():
-    sql_connector = SqlConnector('covid.db')
+    sql_connector = SqlConnector('covid.sql')
 
     return sql_connector
 

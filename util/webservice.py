@@ -9,7 +9,7 @@ from util.sqlconnector import Table, SqlConnector
 def get_country_list():
     logger = logging.getLogger(__name__)
 
-    conn = SqlConnector('covid.db')
+    conn = SqlConnector('covid.sql')
     country_list= []
 
     country_table = Table('country', conn.engine)
@@ -35,7 +35,7 @@ def get_country_list():
 def get_country_demographics(country_id=None):
     logger = logging.getLogger(__name__)
 
-    conn = SqlConnector('covid.db')
+    conn = SqlConnector('covid.sql')
     country_demo_list = []
 
     country_table = Table('country', conn.engine)
@@ -79,7 +79,7 @@ def get_country_demographics(country_id=None):
 def get_covid_data(country_id=None, start_date=None, end_date=None, most_recent=None):
     logger = logging.getLogger(__name__)
 
-    conn = SqlConnector('covid.db')
+    conn = SqlConnector('covid.sql')
     covid_data_list = []
 
     covid_table = Table('covid_data', conn.engine)
@@ -159,7 +159,7 @@ def get_covid_data(country_id=None, start_date=None, end_date=None, most_recent=
 def get_variant_data(country_id=None, start_date=None, end_date=None, most_recent=None):
     logger = logging.getLogger(__name__)
 
-    conn = SqlConnector('covid.db')
+    conn = SqlConnector('covid.sql')
     variant_data_list = []
 
     variant_table = Table('covid_variant', conn.engine)

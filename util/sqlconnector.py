@@ -27,7 +27,7 @@ class SqlConnector:
             engine = create_engine(f'sqlite:///{db_path}')
         except Exception as ex:
             self._logger.error(ex)
-
+            
         return engine
 
 
