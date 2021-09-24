@@ -54,7 +54,7 @@ function getCovidData(countryId) {
             date = data.map(obj => obj.date)
             totalCases = data.map(obj => obj.total_cases)
             totalDeaths = data.map(obj => obj.total_deaths)
-            totalVaccinations = data.map(obj => obj.people_vaccinated)
+            totalVaccinations = data.map(obj => obj.people_fully_vaccinated)
             // Get last index of default ID
             var defaultId = document.getElementById("selDataset").value;
             index = countryIdDaily.lastIndexOf(defaultId)
