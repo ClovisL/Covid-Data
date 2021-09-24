@@ -54,7 +54,7 @@ function getCovidData(countryId) {
             date = data.map(obj => obj.date)
             totalCases = data.map(obj => obj.total_cases)
             totalDeaths = data.map(obj => obj.total_deaths)
-            totalVaccinations = data.map(obj => obj.people_fully_vaccinated)
+            totalVaccinations = data.map(obj => obj.people_vaccinated)
             // Get last index of default ID
             var defaultId = document.getElementById("selDataset").value;
             index = countryIdDaily.lastIndexOf(defaultId)
@@ -64,15 +64,15 @@ function getCovidData(countryId) {
             var defaultCurrentDeaths = totalDeaths[index]
             var defaultCurrentVaccinations = totalVaccinations[index]
             // Turn any null values to 0
-            if (defaultCurrentCases == null) {
-                defaultCurrentCases = 0
-            }
-            if (defaultCurrentDeaths == null) {
-                defaultCurrentDeaths = 0
-            }
-            if (defaultCurrentVaccinations == null) {
-                defaultCurrentVaccinations = 0
-            }
+            // if (defaultCurrentCases == null) {
+            //     defaultCurrentCases = 0
+            // }
+            // if (defaultCurrentDeaths == null) {
+            //     defaultCurrentDeaths = 0
+            // }
+            // if (defaultCurrentVaccinations == null) {
+            //     defaultCurrentVaccinations = 0
+            // }
             // Enter data into text box
             let ele = document.getElementById("sample-metadata");
             ele.innerHTML += "Date: " + defaultCurrentDate + "<br />";
