@@ -64,33 +64,13 @@ function getCovidData(countryId) {
             var defaultCurrentDeaths = totalDeaths[index]
             var defaultCurrentVaccinations = totalVaccinations[index]
             // Turn any null values to the last recorded number
-            while (defaultCurrentCases == null) {
-                if (index = 0) {
-                    defaultCurrentCases = 0
-                    break
-                } else {
-                    index = index - 1
-                }
+            if (defaultCurrentCases == null) {
                 defaultCurrentCases = totalCases[index-1]
             }
-            index = countryIdDaily.lastIndexOf(defaultId)
-            while (defaultCurrentDeaths == null) {
-                if (index = 0) {
-                    defaultCurrentCases = 0
-                    break
-                } else {
-                    index = index - 1
-                }
+            if (defaultCurrentDeaths == null) {
                 defaultCurrentDeaths = totalDeaths[index-1]
             }
-            index = countryIdDaily.lastIndexOf(defaultId)
-            while (defaultCurrentVaccinations == null) {
-                if (index = 0) {
-                    defaultCurrentCases = 0
-                    break
-                } else {
-                    index = index - 1
-                }
+            if (defaultCurrentVaccinations == null) {
                 defaultCurrentVaccinations = totalVaccinations[index-1]
             }
             // Enter data into text box
