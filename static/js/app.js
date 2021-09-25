@@ -65,30 +65,30 @@ function getCovidData(countryId) {
             var defaultCurrentVaccinations = totalVaccinations[index]
             // Turn any null values to the last recorded number
             while (defaultCurrentCases == null) {
-                defaultCurrentCases = totalCases[index-1]
-                if (index = 1) {
+                if (index = 0) {
                     defaultCurrentCases = 0
                 } else {
                     index = index - 1
                 }
+                defaultCurrentCases = totalCases[index-1]
             }
             index = countryIdDaily.lastIndexOf(defaultId)
             while (defaultCurrentDeaths == null) {
-                defaultCurrentDeaths = totalDeaths[index-1]
-                if (index = 1) {
+                if (index = 0) {
                     defaultCurrentCases = 0
                 } else {
                     index = index - 1
                 }
+                defaultCurrentDeaths = totalDeaths[index-1]
             }
             index = countryIdDaily.lastIndexOf(defaultId)
             while (defaultCurrentVaccinations == null) {
-                defaultCurrentVaccinations = totalVaccinations[index-1]
-                if (index = 1) {
+                if (index = 0) {
                     defaultCurrentCases = 0
                 } else {
                     index = index - 1
                 }
+                defaultCurrentVaccinations = totalVaccinations[index-1]
             }
             // Enter data into text box
             let ele = document.getElementById("sample-metadata");
