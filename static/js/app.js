@@ -64,13 +64,13 @@ function getCovidData(countryId) {
             var defaultCurrentDeaths = totalDeaths[index]
             var defaultCurrentVaccinations = totalVaccinations[index]
             // Turn any null values to the last recorded number
-            while (defaultCurrentCases == null) {
+            if (defaultCurrentCases == null) {
                 defaultCurrentCases = totalCases[index-1]
             }
-            while (defaultCurrentDeaths == null) {
+            if (defaultCurrentDeaths == null) {
                 defaultCurrentDeaths = totalDeaths[index-1]
             }
-            while (defaultCurrentVaccinations == null) {
+            if (defaultCurrentVaccinations == null) {
                 defaultCurrentVaccinations = totalVaccinations[index-1]
             }
             // Enter data into text box
