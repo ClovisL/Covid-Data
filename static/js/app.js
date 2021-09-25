@@ -67,6 +67,7 @@ function getCovidData(countryId) {
             while (defaultCurrentCases == null) {
                 if (index = 0) {
                     defaultCurrentCases = 0
+                    break
                 } else {
                     index = index - 1
                 }
@@ -76,6 +77,7 @@ function getCovidData(countryId) {
             while (defaultCurrentDeaths == null) {
                 if (index = 0) {
                     defaultCurrentCases = 0
+                    break
                 } else {
                     index = index - 1
                 }
@@ -85,6 +87,7 @@ function getCovidData(countryId) {
             while (defaultCurrentVaccinations == null) {
                 if (index = 0) {
                     defaultCurrentCases = 0
+                    break
                 } else {
                     index = index - 1
                 }
