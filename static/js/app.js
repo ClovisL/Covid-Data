@@ -63,16 +63,16 @@ function getCovidData(countryId) {
             var defaultCurrentCases = totalCases[index]
             var defaultCurrentDeaths = totalDeaths[index]
             var defaultCurrentVaccinations = totalVaccinations[index]
-            // Turn any null values to 0
-            // if (defaultCurrentCases == null) {
-            //     defaultCurrentCases = 0
-            // }
-            // if (defaultCurrentDeaths == null) {
-            //     defaultCurrentDeaths = 0
-            // }
-            // if (defaultCurrentVaccinations == null) {
-            //     defaultCurrentVaccinations = 0
-            // }
+            // Turn any null values to the last recorded number
+            while (defaultCurrentCases == null) {
+                defaultCurrentCases = totalCases[index-1]
+            }
+            while (defaultCurrentDeaths == null) {
+                defaultCurrentDeaths = totalDeaths[index-1]
+            }
+            while (defaultCurrentVaccinations == null) {
+                defaultCurrentVaccinations = totalVaccinations[index-1]
+            }
             // Enter data into text box
             let ele = document.getElementById("sample-metadata");
             ele.innerHTML += "Date: " + defaultCurrentDate + "<br />";
