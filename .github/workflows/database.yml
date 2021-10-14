@@ -30,4 +30,4 @@ jobs:
     
     - name: execute py script # run the run.py to get the latest data
       run: |
-        python util/databasebuilder.py
+        python databasebuilder.py
