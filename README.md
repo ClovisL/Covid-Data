@@ -5,6 +5,8 @@ An interactive website that takes the latest Covid data for 209 countries, using
 
 An SQL database is created that imports the JSON files. Selecting a country on the website displays the latest numbers regarding Covid, as well as a graph showing infections and deaths since the first day the data was recorded.
 
+Automatically updates data every day at 18:00 UST
+
 
 ## How to use
 ### The app can be accessed as a standalone website: https://covid-data-site.herokuapp.com/
