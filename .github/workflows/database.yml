@@ -31,3 +31,10 @@ jobs:
     - name: execute py script # run the run.py to get the latest data
       run: |
         python updateDB.py
+        
+    - name: Commit report
+      run: |
+        git config --global user.name ClovisL
+        git config --global user.email ClovisL@users.noreply.github.com
+        git commit -am "Automated report"
+        git push
