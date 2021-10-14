@@ -139,3 +139,5 @@ def build_database():
     conn = _create_database()
     _create_tables(conn.engine)
     _load_database(conn.engine)
+
+build_database()    
