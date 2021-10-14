@@ -1,4 +1,4 @@
-name: Updates
+name: Update Database
 
 on:
   schedule:
