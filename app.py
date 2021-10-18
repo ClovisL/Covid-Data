@@ -1,6 +1,4 @@
 from flask import Flask, render_template, redirect, jsonify, request
-from flask.ext.mobility import Mobility
-from flask.ext.mobility.decorators import mobile_template
 import sys
 
 sys.path.append("..")
@@ -12,11 +10,9 @@ from util.sqlconnector import SqlConnector
 from util.logger import logconfig
 
 app = Flask(__name__)
-Mobility(app)
 
 
 @app.route('/')
-@mobile_template('index.html')
 def index():
     return render_template('index.html')
 
