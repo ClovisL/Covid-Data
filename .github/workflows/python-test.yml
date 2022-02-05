@@ -1,0 +1,33 @@
+name: Manual Updates
+
+on:
+  workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo content
+      uses: actions/checkout@v2 # checkout the repository content to github runner
+
+    - name: Setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: "3.8"
+          
+    - name: Install python packages
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Execute py script
+      run: |
+        python updateDB.py
+
+    - name: Commit report
+      run: |
+        git config --global user.name ClovisL
+        git config --global user.email ClovisL@users.noreply.github.com
+        git commit -am "Automated Update"
+        git push
