@@ -106,46 +106,46 @@ def extract_covid_data():
 
     return covid_data_list
 
+# Variant data removed from GitHub
+# def extract_variant_data():
+#     """ produces a list of data to insert into variant data pulled from OWID csv file. The location needs to be
+#     changed to a country_id """
 
-def extract_variant_data():
-    """ produces a list of data to insert into variant data pulled from OWID csv file. The location needs to be
-    changed to a country_id """
+#     logger = logging.getLogger(__name__)
 
-    logger = logging.getLogger(__name__)
+#     variant_url = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/variants/covid-variants.csv'
+#     csv_extract = dataconnector.get_csv_from_web(variant_url)
 
-    variant_url = 'https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/variants/covid-variants.csv'
-    csv_extract = dataconnector.get_csv_from_web(variant_url)
+#     covid_variant_list = []
+#     logger.info('Extracting variant data')
 
-    covid_variant_list = []
-    logger.info('Extracting variant data')
+#     country_list = webservice.get_country_list()
 
-    country_list = webservice.get_country_list()
+#     for row in csv_extract:
 
-    for row in csv_extract:
+#         # remove blank rows and replace with 0
+#         for key, value in row.items():
+#             if key in ['num_sequences', 'perc_sequences', 'num_sequences_total'] and value == '':
+#                 row[key] = 0
 
-        # remove blank rows and replace with 0
-        for key, value in row.items():
-            if key in ['num_sequences', 'perc_sequences', 'num_sequences_total'] and value == '':
-                row[key] = 0
+#         variant_dict = {
+#             'date': dt.datetime.strptime(row.get('date'), '%Y-%m-%d'),
+#             'variant': row['variant'],
+#             'num_sequences': row['num_sequences'],
+#             'perc_sequences': row['perc_sequences'],
+#             'num_sequences_total': row['num_sequences_total']
+#         }
 
-        variant_dict = {
-            'date': dt.datetime.strptime(row.get('date'), '%Y-%m-%d'),
-            'variant': row['variant'],
-            'num_sequences': row['num_sequences'],
-            'perc_sequences': row['perc_sequences'],
-            'num_sequences_total': row['num_sequences_total']
-        }
+#         for country in country_list:
+#             if country['country'] == row['location']:
+#                 variant_dict['country_id'] = country['country_id']
+#                 break
 
-        for country in country_list:
-            if country['country'] == row['location']:
-                variant_dict['country_id'] = country['country_id']
-                break
+#         covid_variant_list.append(variant_dict)
 
-        covid_variant_list.append(variant_dict)
+#     logger.debug(covid_variant_list[0])
 
-    logger.debug(covid_variant_list[0])
-
-    return covid_variant_list
+#     return covid_variant_list
 
 
 
