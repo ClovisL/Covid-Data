@@ -9,7 +9,8 @@ Automatically updates data every day at 20:00 UTC
 
 
 ## How to use
-### The app can be accessed as a standalone website: https://covid-data-site.herokuapp.com/
+### ~~The app can be accessed as a standalone website: https://covid-data-site.herokuapp.com/~~
+###Update: Heroku Postgres no longer supports free plans, and as such the site will not work.
 
 To run the app locally, open a terminal window (such as GitBash), and run the Flask app file using > python app.py
 
