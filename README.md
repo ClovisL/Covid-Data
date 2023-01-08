@@ -28,3 +28,5 @@ A gauge showing what percentage of the population has been vaccinated. May be Na
 A line graph showing 2 lines, one for cases and one for deaths, accross all months from the start of the data set to the end.
 
 An info box and pie chart for variants of the virus.
+
+![Covid Site](https://github.com/ClovisL/Covid-Data/blob/images/CovidSite.png?raw=true)
