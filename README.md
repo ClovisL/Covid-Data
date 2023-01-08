@@ -29,4 +29,4 @@ A line graph showing 2 lines, one for cases and one for deaths, accross all mont
 
 An info box and pie chart for variants of the virus.
 
-![Covid Site](https://github.com/ClovisL/Covid-Data/blob/images/CovidSite.png?raw=true)
+![Covid Site](https://github.com/ClovisL/Covid-Data/blob/main/images/CovidSite.png?raw=true)
